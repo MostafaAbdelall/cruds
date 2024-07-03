@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>cruds</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <span>$ </span>
+                CRUDS
+                <span> $</span>
+            </h1>
+            <p>
+                proudct mangement system
+            </p>
+        </header>
+        <main>
+            <section class="inputs">
+                    <input type="text" name="title" id="t1" placeholder="Title" required>
+                    <div class="price">
+                        <input type="number" onkeyup="getTotal()" name="price" id="p1" placeholder="Price" required>
+                        <input type="number" onkeyup="getTotal()" name="taxes" id="tax" placeholder="Taxes">
+                        <input type="number" onkeyup="getTotal()" name="ads" id="ad" placeholder="Ads">
+                        <input type="number" onkeyup="getTotal()" name="descount" id="des" placeholder="Descount">
+    
+                        <small id="total"></small>
+                    </div>
+                    <input type="number" name="count" id="c1" placeholder="Count" required>
+
+                    <input type="text" name="category" id="c2" placeholder="Category" required>
+
+                    <button type="submit" id="sub">Create</button>
+            </section>
+
+            <section class="outputs">
+                <input onkeyup="Search(this.value)" type="text" id="sr" name="search" placeholder="Search">
+                <div class="bt_n">
+                    <button onclick="getSearchMoode(this.id)" id="sbt">search by title</button>
+                    <button onclick="getSearchMoode(this.id)" id="sbc">search by category</button>
+                </div>
+                <div id="delete">
+                    
+                </div>
+
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>category</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>descount</th>
+                        <th>total</th>
+                        <th>update</th>
+                        <th>delete</th>
+                        <th>info</th>
+                    </tr>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+    </div>
+
+
+
+    <div class="modal" id="m6">
+        <div class="modal-dialog">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <div id="modal-title" >
+                
+                    </div>
+                    <button class="btn-close " data-bs-dismiss="modal"></button>
+                </div>
+                <div id="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button class="close btn btn-c me-auto "   data-bs-dismiss="modal">  close</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright text-center">
+            <p>&copy;Copyright created-by Mostafa Ibrahem.</p>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
